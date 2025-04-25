@@ -1,0 +1,26 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="afowler"
+
+plugins=( 
+    git 
+    zsh-autosuggestions
+)
+
+export PATH=~/.cargo/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
+export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/home/s0002236/repos/FlameGraph:$PATH
+export CXX=/usr/bin/clang++
+export PAPI_DIR=/home/s0002236/repos/papi/src/install
+export PATH=${PAPI_DIR}/bin:$PATH
+export LD_LIBRARY_PATH=${PAPI_DIR}/lib:$LD_LIBRARY_PATH
+
+eval "$(zoxide init zsh)"
+
+source $ZSH/oh-my-zsh.sh
+
