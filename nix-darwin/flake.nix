@@ -126,6 +126,7 @@
               "/Applications/ProtonVPN.app"
               "/Applications/Ghostty.app"
               "/Applications/Zen.app"
+              "/Applications/Xcode.app/Contents/Applications/Instruments.app/"
               "/Applications/GIPHY CAPTURE.app/"
           ];
         finder.FXPreferredViewStyle = "clmv";
