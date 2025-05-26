@@ -65,6 +65,7 @@
           tree-sitter
           xclip
           openssh
+          flyctl
       ];
     
       homebrew = {
@@ -134,6 +135,7 @@
         NSGlobalDomain.InitialKeyRepeat = 12;
         NSGlobalDomain.KeyRepeat = 2;
         screencapture.target = "clipboard";
+        dock.tilesize = 48;
       };
 
     services = {
@@ -147,6 +149,8 @@
             yabai -m rule --add app="^System Preferences$" manage=off
             yabai -m rule --add title="Preferences$"       manage=off
             yabai -m rule --add title="Settings$"          manage=off
+            yabai -m rule --add title="Proton Pass$        manage=off
+            yabai -m rule --add title="ProtonVPN$"         manage=off
           '';
           config = {
               layout = "bsp";
