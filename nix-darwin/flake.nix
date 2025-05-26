@@ -78,6 +78,7 @@
 	      "zen-browser"
 	      "protonvpn"
 	      "proton-pass"
+          "figma"
         ];
         masApps = {
             "Xcode" = 497799835;
@@ -128,6 +129,7 @@
               "/Applications/Zen.app"
               "/Applications/Xcode.app/Contents/Applications/Instruments.app/"
               "/Applications/GIPHY CAPTURE.app/"
+              "/Applications/Figma.app/"
           ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
