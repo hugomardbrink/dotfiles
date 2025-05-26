@@ -6,7 +6,7 @@
 set user to "hugom", hostname to "air"
 
 ### Partially disable SIP
-(Guide)[https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection]
+[Guide](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
 
 ### Install determine nix
 ```bash
