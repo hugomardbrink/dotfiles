@@ -80,6 +80,7 @@
         ];
         masApps = {
             "Xcode" = 497799835;
+            "Giphy Capture" = 668208984;
         };
 
         onActivation.autoUpdate = true;
@@ -124,6 +125,7 @@
               "/Applications/ProtonVPN.app"
               "/Applications/Ghostty.app"
               "/Applications/Zen.app"
+              "/Applications/GIPHY CAPTURE.app/"
           ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled = false;
