@@ -1,7 +1,7 @@
 clipboard-read = allow
 clipboard-write = deny
 window-decoration = none
-background-opacity = 1.0
+background-opacity = 0.9
 background-blur = 200
 theme = GruvboxLight
 background = #fbf1c7
@@ -26,7 +26,7 @@ palette = 12=#458588
 palette = 13=#b16186
 palette = 14=#689d69
 palette = 15=#7c6f64
-font-size = 14
+font-size = 16
 keybind = ctrl+w=close_surface
 keybind = ctrl+n=new_split:right
 keybind = ctrl+enter=new_window
@@ -38,3 +38,5 @@ window-padding-y = 12
 font-family = FiraCode Nerd Font Mono
 shell-integration-features = no-cursor
 cursor-style = block
+font-thicken = true
+font-style = medium
