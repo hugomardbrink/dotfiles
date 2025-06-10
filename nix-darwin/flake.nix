@@ -47,7 +47,6 @@
           zig
           clang
           rustup
-          rustc
           python3
           go
           jdk
@@ -66,12 +65,19 @@
           xclip
           openssh
           flyctl
+          libiconv
+          pkg-config
       ];
+      environment.variables = {
+        LIBRARY_PATH = "${pkgs.libiconv}/lib";
+        C_INCLUDE_PATH = "${pkgs.libiconv}/include";
+    };
     
       homebrew = {
         enable = true;
         brews = [ 
           "mas"
+          "manim"
         ];
         casks = [ 
           "ghostty"
@@ -79,6 +85,7 @@
 	      "protonvpn"
 	      "proton-pass"
           "figma"
+          "spotify"
         ];
         masApps = {
             "Xcode" = 497799835;
@@ -92,6 +99,7 @@
       fonts.packages = [
           pkgs.nerd-fonts.jetbrains-mono 
           pkgs.nerd-fonts.fira-code
+          pkgs.fira
       ];
 
       users.users.hugom = {
@@ -152,8 +160,10 @@
             yabai -m rule --add app="^System Preferences$" manage=off
             yabai -m rule --add title="Preferences$"       manage=off
             yabai -m rule --add title="Settings$"          manage=off
-            yabai -m rule --add title="Proton Pass$        manage=off
+            yabai -m rule --add title="Proton Pass$"       manage=off
             yabai -m rule --add title="ProtonVPN$"         manage=off
+            yabai -m rule --add title="^QuickTime Player$" manage=off
+            yabai -m rule --add title="Spotify$"           manage=off
           '';
           config = {
               layout = "bsp";
@@ -215,27 +225,6 @@
                         index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
                         yabai -m space --focus "''${index}"
 
-      # fast focus space
-      shift + alt - x : yabai -m space --focus recent
-      shift + alt - 1 : yabai -m space --focus 1
-      shift + alt - 2 : yabai -m space --focus 2
-      shift + alt - 3 : yabai -m space --focus 3
-      shift + alt - 4 : yabai -m space --focus 4
-      shift + alt - 5 : yabai -m space --focus 5
-      shift + alt - 6 : yabai -m space --focus 6
-      shift + alt - 7 : yabai -m space --focus 7
-      shift + alt - 8 : yabai -m space --focus 8
-            
-      # send window to desktop and follow focus
-      shift + lctrl + alt - z : yabai -m window --space next; yabai -m space --focus next
-      shift + lctrl + alt - 1 : yabai -m window --space  1; yabai -m space --focus 1
-      shift + lctrl + alt - 2 : yabai -m window --space  2; yabai -m space --focus 2
-      shift + lctrl + alt - 3 : yabai -m window --space  3; yabai -m space --focus 3
-      shift + lctrl + alt - 4 : yabai -m window --space  4; yabai -m space --focus 4
-      shift + lctrl + alt - 5 : yabai -m window --space  5; yabai -m space --focus 5
-      shift + lctrl + alt - 6 : yabai -m window --space  6; yabai -m space --focus 6
-      shift + lctrl + alt - 7 : yabai -m window --space  7; yabai -m space --focus 7
-      shift + lctrl + alt - 8 : yabai -m window --space  8; yabai -m space --focus 8
 
       # Equalize size of windows
       shift + alt - e : yabai -m space --balance

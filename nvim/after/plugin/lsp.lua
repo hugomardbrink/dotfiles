@@ -1,5 +1,7 @@
 local lsp_zero = require('lsp-zero')
 
+require('java').setup()
+
 vim.diagnostic.config({
     severity_sort = true
 })

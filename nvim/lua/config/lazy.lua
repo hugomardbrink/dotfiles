@@ -80,8 +80,12 @@ require("lazy").setup({
       -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = 'general'
     end,
+  },
+  {
+    "nvim-java/nvim-java"
   }
 })
 
 local lspconfig = require('lspconfig')
 lspconfig.gleam.setup({})
+require('lspconfig').jdtls.setup({})

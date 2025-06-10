@@ -40,7 +40,9 @@ in
     shellAliases = {
       ls = "ls --color";
     };
+
   };
+
 
   programs.neovim = {
     enable = true;
@@ -65,5 +67,9 @@ in
         echo "SSH key already exists at ${sshKeyPath}, skipping."
       fi
 '';
+
+    home.sessionPath = [
+      "$HOME/.cargo/bin"
+    ];
 }
  

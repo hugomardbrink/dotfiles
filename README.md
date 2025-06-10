@@ -38,4 +38,4 @@ Restart computer
 - proton vpn + pass
 
 ## Todo
-- improve java dev environment in nvim
+- Fiddle with skhd & yabai
